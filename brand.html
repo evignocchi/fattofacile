@@ -1,0 +1,536 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>fattofacile · Brand identity</title>
+<meta name="description" content="Logo, colori, tipografia e voce di fattofacile.it: le regole per usare il marchio in modo coerente.">
+<meta name="robots" content="noindex">
+<style>
+@font-face{font-family:"Fredoka";font-weight:500;font-display:swap;src:url(assets/fonts/fredoka-latin-500-normal.woff2) format("woff2")}
+@font-face{font-family:"Fredoka";font-weight:600;font-display:swap;src:url(assets/fonts/fredoka-latin-600-normal.woff2) format("woff2")}
+@font-face{font-family:"Fredoka";font-weight:700;font-display:swap;src:url(assets/fonts/fredoka-latin-700-normal.woff2) format("woff2")}
+@font-face{font-family:"Outfit";font-weight:400;font-display:swap;src:url(assets/fonts/outfit-latin-400-normal.woff2) format("woff2")}
+@font-face{font-family:"Outfit";font-weight:500;font-display:swap;src:url(assets/fonts/outfit-latin-500-normal.woff2) format("woff2")}
+@font-face{font-family:"Outfit";font-weight:600;font-display:swap;src:url(assets/fonts/outfit-latin-600-normal.woff2) format("woff2")}
+
+:root{
+  --verde:#0E6050; --verde-scuro:#0A4A3E; --menta:#DCEBE3;
+  --corallo:#F9775A; --corallo-testo:#B93E25; --pesca:#FFE3DA;
+  --crema:#F5F6EE; --carta:#FAFCF4; --inchiostro:#252623; --grafite:#585956;
+  --linea:#DADDD0;
+  --display:"Fredoka","Nunito","Trebuchet MS",sans-serif;
+  --testo:"Outfit","Segoe UI",system-ui,sans-serif;
+  --ease:cubic-bezier(.16,1,.3,1);
+  --gutter:clamp(16px,4vw,48px);
+  --max:1120px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{background:var(--crema);color:var(--inchiostro);font:400 18px/1.6 var(--testo);-webkit-font-smoothing:antialiased}
+::selection{background:var(--verde);color:var(--carta)}
+:focus-visible{outline:3px solid var(--verde);outline-offset:3px;border-radius:6px}
+img,svg{display:block;max-width:100%}
+a{color:inherit}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 var(--gutter)}
+section{padding:clamp(64px,9vw,128px) 0}
+h1,h2,h3{font-family:var(--display);font-weight:700;color:var(--verde);text-wrap:balance;letter-spacing:-.02em;line-height:1.05}
+h2{font-size:clamp(34px,5vw,60px)}
+h3{font-size:clamp(22px,2.4vw,28px);line-height:1.15;letter-spacing:-.01em}
+p{max-width:64ch;text-wrap:pretty}
+.lead{font-size:clamp(19px,2vw,22px);color:var(--grafite);margin-top:20px}
+.sec-head{margin-bottom:clamp(36px,5vw,64px)}
+code,.mono{font-family:ui-monospace,"SF Mono",Menlo,monospace;font-size:.85em;font-variant-numeric:tabular-nums}
+
+/* --- logo --- */
+.logo{--s:64px;text-decoration:none;position:relative;display:inline-block;font:700 var(--s)/1 var(--display);letter-spacing:-.025em;color:var(--verde);padding-right:.42em;white-space:nowrap}
+.logo svg{position:absolute;right:0;top:-.14em;width:.5em;height:.42em;overflow:visible}
+.logo svg path{stroke:var(--corallo)}
+.logo--mono{color:var(--inchiostro)} .logo--mono svg path{stroke:var(--grafite)}
+.logo--neg{color:var(--carta)} .logo--neg svg path{stroke:var(--corallo)}
+.logo--bianco{color:var(--carta)} .logo--bianco svg path{stroke:var(--carta)}
+.tick{fill:none;stroke-width:9;stroke-linecap:round;stroke-linejoin:round}
+.icona{--s:120px;width:var(--s);height:var(--s);border-radius:calc(var(--s)*.23);background:var(--verde);position:relative;flex:none;display:grid;place-items:center}
+.icona b{font:700 calc(var(--s)*.74)/1 var(--display);color:var(--carta);transform:translate(-14%,3%)}
+.icona svg{position:absolute;width:27%;height:23%;right:15%;top:22%;overflow:visible}
+.icona svg path{stroke:var(--corallo)}
+
+/* --- nav --- */
+.nav{position:sticky;top:0;z-index:5;background:color-mix(in srgb,var(--crema) 92%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--linea)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:60px}
+.nav .logo{--s:26px}
+.nav nav{min-width:0}
+.regole>*,.risorse>*,.voce>*{min-width:0}
+.nav ul{display:flex;gap:4px;list-style:none;overflow-x:auto;scrollbar-width:none}
+.nav ul::-webkit-scrollbar{display:none}
+.nav li a{display:inline-flex;align-items:center;min-height:44px;padding:0 14px;font-weight:500;font-size:15px;text-decoration:none;color:var(--grafite);border-radius:999px;white-space:nowrap;transition:background .25s var(--ease),color .25s var(--ease)}
+.nav li a:hover{background:var(--menta);color:var(--verde)}
+@media(max-width:700px){.nav .logo{display:none}}
+
+/* --- hero --- */
+.hero{padding:clamp(56px,10vw,140px) 0 clamp(8px,2vw,24px);text-align:center}
+.hero .logo{--s:clamp(48px,11.5vw,148px)}
+.hero .tag{margin:clamp(20px,3vw,36px) auto 0;font:500 clamp(18px,2.6vw,28px)/1.3 var(--testo);color:var(--verde);max-width:none}
+.hero .intro{margin:28px auto 0;color:var(--grafite);font-size:clamp(17px,1.8vw,20px)}
+.hero .logo svg path{animation:disegna .9s .35s var(--ease) both;stroke-dasharray:80;}
+@keyframes disegna{from{stroke-dashoffset:80}to{stroke-dashoffset:0}}
+
+/* --- logo section --- */
+.versioni{display:grid;grid-template-columns:repeat(6,1fr);gap:16px}
+.tela{border-radius:24px;display:grid;place-items:center;padding:36px 24px;min-height:220px;position:relative}
+.tela small{position:absolute;left:20px;bottom:14px;font-size:14px}
+.tela--grande{grid-column:span 6;min-height:300px;background:var(--carta);border:1px solid var(--linea)}
+.tela--a{grid-column:span 2;background:var(--verde);color:var(--carta)}
+.tela--b{grid-column:span 2;background:var(--carta);border:1px solid var(--linea);color:var(--grafite)}
+.tela--c{grid-column:span 2;background:var(--corallo);color:var(--inchiostro)}
+.tela--d{grid-column:span 3;background:var(--menta);color:var(--verde)}
+.tela--e{grid-column:span 3;background:var(--inchiostro);color:var(--carta)}
+.tela .logo{--s:clamp(34px,5.4vw,60px)}
+.tela--grande .logo{--s:clamp(48px,9vw,112px)}
+.tela--a .logo{--s:clamp(30px,3.9vw,46px)} .tela--b .logo{--s:clamp(30px,3.9vw,46px)} .tela--c .logo{--s:clamp(30px,3.9vw,46px)}
+@media(max-width:820px){.tela--a,.tela--b,.tela--c,.tela--d,.tela--e{grid-column:span 6}}
+
+.regole{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,5vw,72px);margin-top:clamp(56px,8vw,96px);align-items:start}
+@media(max-width:820px){.regole{grid-template-columns:1fr}}
+.spazio{background:var(--carta);border:1px solid var(--linea);border-radius:24px;padding:36px;display:grid;place-items:center}
+.spazio .box{position:relative;padding:calc(var(--x)*1) ;outline:1.5px dashed var(--corallo);outline-offset:0;--x:34px}
+.spazio .box .logo{--s:64px}
+.spazio .box::before,.spazio .box::after{content:"x";position:absolute;font:600 13px var(--display);color:var(--corallo-testo)}
+.spazio .box::before{left:50%;top:6px;transform:translateX(-50%)}
+.spazio .box::after{top:50%;left:12px;transform:translateY(-50%)}
+@media(max-width:560px){.spazio{padding:20px}.spazio .box{--x:16px}.spazio .box .logo{--s:40px}}
+.lista{list-style:none;margin-top:20px;display:grid;gap:0}
+.lista li{padding:14px 0;border-bottom:1px solid var(--linea);display:flex;gap:14px;align-items:baseline}
+.lista li:first-child{border-top:1px solid var(--linea)}
+.lista b{font-weight:600;min-width:9.5ch}
+.minimi{display:flex;align-items:flex-end;gap:36px;margin-top:28px;flex-wrap:wrap}
+.minimi div{display:grid;gap:8px;justify-items:start;font-size:14px;color:var(--grafite)}
+
+.errori{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:24px}
+@media(max-width:900px){.errori{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:480px){.errori{grid-template-columns:1fr}}
+.errore{display:grid;gap:12px}
+.errore .prova{background:var(--carta);border:1px solid var(--linea);border-radius:18px;height:120px;display:grid;place-items:center;overflow:hidden;position:relative}
+.errore .prova::after{content:"";position:absolute;left:-10%;right:-10%;top:50%;height:3px;background:var(--corallo-testo);transform:rotate(-14deg);opacity:.85}
+.errore p{font-size:15px;color:var(--grafite)}
+.errore .logo{--s:34px}
+
+/* --- colori --- */
+.palette{display:grid;grid-template-columns:repeat(12,1fr);gap:0;border-radius:28px;overflow:hidden;border:1px solid var(--linea)}
+.col{padding:28px 24px 24px;min-height:300px;display:flex;flex-direction:column;justify-content:space-between;gap:24px}
+.col h3{font-size:clamp(24px,2.6vw,32px);color:inherit}
+.col p{font-size:15px;line-height:1.5;margin-top:8px}
+.col dl{display:grid;grid-template-columns:auto 1fr;gap:2px 14px;font-size:14px}
+.col dt{font-weight:400} .col dd{font-variant-numeric:tabular-nums;font-weight:500}
+.col--verde{grid-column:span 6;background:var(--verde);color:var(--carta);min-height:380px}
+.col--corallo{grid-column:span 3;background:var(--corallo);color:var(--inchiostro);min-height:380px}
+.col--crema{grid-column:span 3;background:var(--crema);color:var(--inchiostro);min-height:380px}
+.col--s1{grid-column:span 3;background:var(--verde-scuro);color:var(--carta)}
+.col--s2{grid-column:span 3;background:var(--menta);color:var(--verde-scuro)}
+.col--s3{grid-column:span 3;background:var(--pesca);color:var(--corallo-testo)}
+.col--s4{grid-column:span 3;background:var(--inchiostro);color:var(--carta)}
+.col--s5{grid-column:span 6;background:var(--carta);color:var(--inchiostro)}
+.col--s6{grid-column:span 6;background:var(--grafite);color:var(--carta)}
+@media(max-width:900px){.col--verde,.col--corallo,.col--crema,.col--s1,.col--s2,.col--s3,.col--s4,.col--s5,.col--s6{grid-column:span 12;min-height:0}}
+@media(min-width:901px) and (max-width:1100px){.col--corallo,.col--crema{grid-column:span 6}}
+
+.proporzioni{display:flex;height:72px;border-radius:999px;overflow:hidden;margin-top:48px;border:1px solid var(--linea)}
+.proporzioni span{display:flex;align-items:center;padding:0 20px;font-size:14px;font-weight:500;white-space:nowrap;overflow:hidden}
+.contrasti{margin-top:56px;display:grid;grid-template-columns:repeat(3,1fr);gap:0 40px}
+@media(max-width:900px){.contrasti{grid-template-columns:1fr}}
+.cont{display:flex;align-items:center;gap:16px;padding:14px 0;border-bottom:1px solid var(--linea)}
+.cont .a{width:56px;height:44px;border-radius:12px;display:grid;place-items:center;font:600 20px var(--display);flex:none;border:1px solid transparent}
+.cont .a--cr{border-color:var(--linea)}
+.cont div:last-child{display:grid;font-size:15px;line-height:1.35}
+.cont strong{font-weight:600;font-variant-numeric:tabular-nums}
+.ok{color:var(--verde)} .no{color:var(--corallo-testo)}
+
+/* --- tipografia --- */
+.tipo{display:grid;grid-template-columns:1.15fr 1fr;gap:16px}
+@media(max-width:900px){.tipo{grid-template-columns:1fr}}
+.font{border-radius:28px;padding:clamp(28px,4vw,48px);display:flex;flex-direction:column;gap:28px;justify-content:space-between}
+.font--d{background:var(--verde);color:var(--carta)}
+.font--t{background:var(--carta);border:1px solid var(--linea)}
+.font .nome{font-size:clamp(64px,10vw,128px);line-height:.9;letter-spacing:-.03em}
+.font--d .nome{font-family:var(--display);font-weight:700}
+.font--t .nome{font-family:var(--testo);font-weight:500;color:var(--verde)}
+.font .glifi{font-size:clamp(20px,2.4vw,28px);line-height:1.4;word-break:break-all}
+.font--d .glifi{font-family:var(--display);font-weight:600}
+.font--t .glifi{font-weight:500}
+.font .meta{display:flex;gap:10px 28px;flex-wrap:wrap;font-size:14px}
+.font .meta b{font-weight:600}
+.scala{margin-top:clamp(48px,7vw,88px)}
+.riga{display:grid;grid-template-columns:150px 1fr;gap:12px 32px;align-items:baseline;padding:22px 0;border-bottom:1px solid var(--linea)}
+.riga:first-child{border-top:1px solid var(--linea)}
+.riga small{font-size:14px;color:var(--grafite);line-height:1.4}
+.riga .d1{font:700 clamp(38px,6vw,76px)/1 var(--display);color:var(--verde);letter-spacing:-.025em}
+.riga .d2{font:700 clamp(28px,4vw,46px)/1.05 var(--display);color:var(--verde);letter-spacing:-.02em}
+.riga .d3{font:600 clamp(22px,2.6vw,28px)/1.2 var(--display);color:var(--verde)}
+.riga .t1{font:400 clamp(18px,1.9vw,20px)/1.6 var(--testo);max-width:62ch}
+.riga .t2{font:500 15px/1.5 var(--testo);color:var(--grafite)}
+.riga .t3{font:600 16px/1 var(--display);color:var(--verde);background:var(--menta);display:inline-block;padding:12px 22px;border-radius:999px}
+@media(max-width:640px){.riga{grid-template-columns:1fr}}
+.nota{margin-top:36px;padding:22px 24px;background:var(--pesca);border-radius:20px;font-size:16px;max-width:none;color:var(--inchiostro)}
+
+/* --- voce --- */
+.voce{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,5vw,72px)}
+@media(max-width:820px){.voce{grid-template-columns:1fr}}
+.principi{display:grid;gap:36px}
+.principi h3{margin-bottom:8px}
+.principi p{color:var(--grafite)}
+.dire{display:grid;gap:0;align-content:start}
+.dire .coppia{padding:22px 0;border-bottom:1px solid var(--linea);display:grid;gap:8px}
+.dire .coppia:first-child{border-top:1px solid var(--linea)}
+.dire s{color:var(--grafite);text-decoration-color:var(--corallo);text-decoration-thickness:2px}
+.dire strong{font:600 clamp(20px,2vw,24px)/1.3 var(--display);color:var(--verde)}
+
+/* --- applicazioni --- */
+.app{display:grid;grid-template-columns:repeat(12,1fr);gap:16px}
+.app>*{border-radius:28px}
+.pannello{grid-column:span 7;background:var(--verde);color:var(--carta);padding:clamp(28px,4vw,52px);display:flex;flex-direction:column;gap:20px;justify-content:space-between;min-height:420px}
+.pannello .logo{align-self:flex-start}
+.pannello h3{color:var(--carta);font-size:clamp(34px,5vw,56px);max-width:12ch}
+.pannello p{color:var(--menta)}
+.bottoni{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.btn{font:600 17px/1 var(--display);display:inline-flex;align-items:center;gap:10px;min-height:52px;padding:0 28px;border-radius:999px;border:2px solid transparent;text-decoration:none;cursor:pointer;transition:transform .35s var(--ease),background .25s var(--ease),color .25s var(--ease)}
+.btn:hover{transform:translateY(-2px)}
+.btn:active{transform:translateY(0)}
+.btn--p{background:var(--corallo);color:var(--inchiostro)}
+.btn--p:hover{background:#ff8a70}
+.btn--s{border-color:var(--menta);color:var(--carta)}
+.btn--s:hover{background:var(--carta);color:var(--verde)}
+.btn--v{background:var(--verde);color:var(--carta)}
+.btn--v:hover{background:var(--verde-scuro)}
+.btn[disabled]{opacity:.45;cursor:not-allowed;transform:none}
+.prezzo{grid-column:span 5;background:var(--carta);border:1px solid var(--linea);padding:clamp(28px,4vw,44px);display:flex;flex-direction:column;gap:18px;justify-content:space-between}
+.prezzo .num{font:700 clamp(64px,9vw,104px)/.9 var(--display);color:var(--verde);letter-spacing:-.04em;font-variant-numeric:tabular-nums}
+.prezzo .num span{display:block;font-size:18px;letter-spacing:0;color:var(--grafite);margin-top:10px;font-weight:600}
+.spunte{list-style:none;display:grid;gap:10px}
+.spunte li{display:flex;gap:12px;align-items:flex-start;font-size:17px}
+.spunte svg{flex:none;width:22px;height:22px;margin-top:3px}
+.spunte svg path{stroke:var(--corallo-testo);stroke-width:12}
+.mini{grid-column:span 4;background:var(--menta);padding:32px;display:grid;gap:20px;justify-items:start;align-content:start;min-height:240px}
+.mini--b{background:var(--pesca)}
+.mini--c{background:var(--inchiostro);color:var(--carta)}
+.mini h3{font-size:24px}
+.mini--c h3{color:var(--carta)}
+.mini p{font-size:16px}
+.campo{display:grid;gap:8px;width:100%}
+.campo label{font:600 15px var(--display);color:var(--verde)}
+.campo input{font:400 17px var(--testo);min-height:50px;padding:0 18px;border-radius:14px;border:2px solid var(--verde);background:var(--carta);color:var(--inchiostro);width:100%}
+.campo input::placeholder{color:var(--grafite)}
+.campo input:focus{outline:3px solid var(--corallo);outline-offset:2px}
+.favicons{display:flex;gap:14px;align-items:flex-end}
+.favicons .icona:nth-child(1){--s:88px}.favicons .icona:nth-child(2){--s:56px}.favicons .icona:nth-child(3){--s:32px}.favicons .icona:nth-child(4){--s:20px}
+@media(max-width:900px){.pannello,.prezzo,.mini{grid-column:span 12}}
+@media(min-width:901px) and (max-width:1100px){.mini{grid-column:span 6}.mini:last-child{grid-column:span 12}}
+
+/* --- risorse --- */
+.risorse{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,5vw,72px);align-items:start}
+@media(max-width:820px){.risorse{grid-template-columns:1fr}}
+.token{background:var(--inchiostro);color:#E8EADF;border-radius:20px;padding:24px;font:14px/1.7 ui-monospace,"SF Mono",Menlo,monospace;overflow-x:auto;white-space:pre}
+.token i{font-style:normal;color:var(--corallo)}
+footer{border-top:1px solid var(--linea);padding:40px 0 56px;color:var(--grafite);font-size:15px}
+footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;align-items:center}
+footer .logo{--s:28px}
+
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="spunta" viewBox="0 0 48 40"><path class="tick" d="M5 21 L17 33 L43 7"/></symbol>
+</svg>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="logo" href="#top" aria-label="fattofacile, inizio pagina">fattofacile<svg viewBox="0 0 48 40" aria-hidden="true"><path class="tick" d="M5 21 L17 33 L43 7"/></svg></a>
+    <nav aria-label="Sezioni">
+      <ul>
+        <li><a href="#logo">Logo</a></li>
+        <li><a href="#colori">Colori</a></li>
+        <li><a href="#tipografia">Tipografia</a></li>
+        <li><a href="#voce">Voce</a></li>
+        <li><a href="#applicazioni">Applicazioni</a></li>
+        <li><a href="#risorse">Risorse</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+<section class="hero">
+  <div class="wrap">
+    <h1 class="logo" aria-label="fattofacile">fattofacile<svg viewBox="0 0 48 40" aria-hidden="true"><path class="tick" d="M5 21 L17 33 L43 7"/></svg></h1>
+    <p class="tag">Il tuo sito. Senza complicazioni.</p>
+    <p class="intro">Le regole per usare il marchio di fattofacile.it: logo, colori, caratteri e il modo in cui parliamo. Servono a chi disegna, scrive o pubblica qualcosa a nostro nome.</p>
+  </div>
+</section>
+
+<section id="logo">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Il logo</h2>
+      <p class="lead">Una parola sola, tutta minuscola, in verde scuro. Sopra l'ultima lettera sta la spunta corallo: è il lavoro finito, la cosa che il cliente vuole sentirsi dire.</p>
+    </div>
+
+    <div class="versioni">
+      <div class="tela tela--grande">
+        <span class="logo">fattofacile<svg viewBox="0 0 48 40" aria-hidden="true"><path class="tick" d="M5 21 L17 33 L43 7"/></svg></span>
+        <small>Versione principale, su crema o su bianco</small>
+      </div>
+      <div class="tela tela--a">
+        <span class="logo logo--neg">fattofacile<svg viewBox="0 0 48 40" aria-hidden="true"><path class="tick" d="M5 21 L17 33 L43 7"/></svg></span>
+        <small>In negativo, su verde</small>
+      </div>
+      <div class="tela tela--b">
+        <span class="logo logo--mono">fattofacile<svg viewBox="0 0 48 40" aria-hidden="true"><path class="tick" d="M5 21 L17 33 L43 7"/></svg></span>
+        <small>Monocromatico, per stampa in nero</small>
+      </div>
+      <div class="tela tela--c">
+        <span class="logo" style="color:var(--inchiostro)">fattofacile<svg viewBox="0 0 48 40" aria-hidden="true"><path class="tick" d="M5 21 L17 33 L43 7" style="stroke:var(--carta)"/></svg></span>
+        <small>Su corallo: testo scuro, spunta chiara</small>
+      </div>
+      <div class="tela tela--d">
+        <div class="icona" style="--s:132px"><b>f</b><svg viewBox="0 0 48 40" aria-hidden="true"><path class="tick" d="M5 21 L17 33 L43 7"/></svg></div>
+        <small>Icona: app, favicon, profili social</small>
+      </div>
+      <div class="tela tela--e">
+        <span class="logo logo--bianco">fattofacile<svg viewBox="0 0 48 40" aria-hidden="true"><path class="tick" d="M5 21 L17 33 L43 7"/></svg></span>
+        <small>Tutto bianco, su fotografie e fondi scuri</small>
+      </div>
+    </div>
+
+    <div class="regole">
+      <div>
+        <h3>Spazio e dimensioni</h3>
+        <p class="lead" style="font-size:18px;margin-top:14px">Intorno al logo lascia libero uno spazio pari all'altezza della lettera <b>f</b>. Niente testi, bordi o immagini dentro quel perimetro.</p>
+        <div class="minimi">
+          <div><span class="logo" style="--s:28px">fattofacile<svg viewBox="0 0 48 40" aria-hidden="true"><path class="tick" d="M5 21 L17 33 L43 7"/></svg></span>Minimo su schermo: 110 px di larghezza</div>
+          <div><div class="icona" style="--s:32px"><b>f</b><svg viewBox="0 0 48 40" aria-hidden="true"><path class="tick" d="M5 21 L17 33 L43 7"/></svg></div>Icona: 16 px</div>
+        </div>
+        <ul class="lista">
+          <li><b>Sempre</b><span>minuscolo e attaccato: <code>fattofacile</code>. Nel testo corrente va scritto così, anche a inizio frase.</span></li>
+          <li><b>Mai</b><span>maiuscole, spazi, trattini. Non "FattoFacile", non "Fatto Facile".</span></li>
+          <li><b>Dominio</b><span><code>fattofacile.it</code> in minuscolo, senza "www".</span></li>
+        </ul>
+      </div>
+      <div class="spazio" aria-label="Schema dello spazio di rispetto">
+        <div class="box"><span class="logo">fattofacile<svg viewBox="0 0 48 40" aria-hidden="true"><path class="tick" d="M5 21 L17 33 L43 7"/></svg></span></div>
+      </div>
+    </div>
+
+    <h3 style="margin-top:clamp(56px,8vw,96px)">Cosa non fare</h3>
+    <div class="errori">
+      <div class="errore"><div class="prova"><span class="logo" style="transform:scaleX(1.45)">fattofacile<svg viewBox="0 0 48 40" aria-hidden="true"><path class="tick" d="M5 21 L17 33 L43 7"/></svg></span></div><p>Non stirarlo né schiacciarlo.</p></div>
+      <div class="errore"><div class="prova"><span class="logo" style="color:#6a3fa0">fattofacile<svg viewBox="0 0 48 40" aria-hidden="true"><path class="tick" d="M5 21 L17 33 L43 7" style="stroke:#3fa0a0"/></svg></span></div><p>Non cambiare i colori.</p></div>
+      <div class="errore"><div class="prova"><span class="logo" style="color:var(--verde-scuro);font-family:Georgia,serif;font-weight:400">fattofacile<svg viewBox="0 0 48 40" aria-hidden="true"><path class="tick" d="M5 21 L17 33 L43 7"/></svg></span></div><p>Non rifare le lettere con un altro carattere.</p></div>
+      <div class="errore"><div class="prova" style="background:var(--corallo)"><span class="logo">fattofacile<svg viewBox="0 0 48 40" aria-hidden="true"><path class="tick" d="M5 21 L17 33 L43 7"/></svg></span></div><p>Non metterlo su corallo in verde: non si legge.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="colori" style="background:var(--carta)">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>I colori</h2>
+      <p class="lead">Verde bosco per il marchio e i titoli. Corallo per l'azione e la spunta, in piccole dosi. Crema al posto del bianco: la pagina resta calda e non abbaglia.</p>
+    </div>
+
+    <div class="palette">
+      <div class="col col--verde">
+        <div><h3>Verde bosco</h3><p>Il colore del marchio. Titoli, logo, pulsanti principali, fondi di sezione.</p></div>
+        <dl><dt>HEX</dt><dd>#0E6050</dd><dt>RGB</dt><dd>14 · 96 · 80</dd><dt>Variabile</dt><dd>--verde</dd></dl>
+      </div>
+      <div class="col col--corallo">
+        <div><h3>Corallo</h3><p>La spunta e il pulsante d'azione. Mai per testo su fondo chiaro.</p></div>
+        <dl><dt>HEX</dt><dd>#F9775A</dd><dt>RGB</dt><dd>249 · 119 · 90</dd><dt>Variabile</dt><dd>--corallo</dd></dl>
+      </div>
+      <div class="col col--crema">
+        <div><h3>Crema</h3><p>Lo sfondo di default di ogni pagina.</p></div>
+        <dl><dt>HEX</dt><dd>#F5F6EE</dd><dt>RGB</dt><dd>245 · 246 · 238</dd><dt>Variabile</dt><dd>--crema</dd></dl>
+      </div>
+      <div class="col col--s1"><div><h3>Verde profondo</h3><p>Hover e fondi molto scuri.</p></div><dl><dt>HEX</dt><dd>#0A4A3E</dd></dl></div>
+      <div class="col col--s2"><div><h3>Menta</h3><p>Fondi morbidi, etichette, selezioni.</p></div><dl><dt>HEX</dt><dd>#DCEBE3</dd></dl></div>
+      <div class="col col--s3"><div><h3>Pesca</h3><p>Avvisi e note. Il testo qui è corallo scuro.</p></div><dl><dt>HEX</dt><dd>#FFE3DA</dd></dl></div>
+      <div class="col col--s4"><div><h3>Inchiostro</h3><p>Testo corrente e versione in nero.</p></div><dl><dt>HEX</dt><dd>#252623</dd></dl></div>
+      <div class="col col--s5"><div><h3>Carta</h3><p>Fondo delle schede e dei campi, un filo più chiaro della crema.</p></div><dl><dt>HEX</dt><dd>#FAFCF4</dd></dl></div>
+      <div class="col col--s6"><div><h3>Grafite</h3><p>Testo secondario, didascalie e la spunta nella versione monocromatica.</p></div><dl><dt>HEX</dt><dd>#585956</dd></dl></div>
+    </div>
+
+    <h3 style="margin-top:clamp(48px,7vw,80px)">In che proporzione</h3>
+    <p class="lead" style="font-size:18px;margin-top:10px">Una pagina è soprattutto crema e verde. Il corallo è una presenza piccola e regolare, quasi sempre una sola cosa per schermata.</p>
+    <div class="proporzioni" role="img" aria-label="Proporzioni indicative: crema 60%, verde 30%, corallo 7%, inchiostro 3%">
+      <span style="flex:60;background:var(--crema);color:var(--inchiostro)">Crema 60%</span>
+      <span style="flex:30;background:var(--verde);color:var(--carta)">Verde 30%</span>
+      <span style="flex:7;background:var(--corallo);color:var(--inchiostro);padding:0 10px">7%</span>
+      <span style="flex:3;background:var(--inchiostro);padding:0"></span>
+    </div>
+
+    <h3 style="margin-top:clamp(48px,7vw,80px)">Contrasto: cosa leggere su cosa</h3>
+    <p class="lead" style="font-size:18px;margin-top:10px">Rapporti calcolati secondo WCAG. Per il testo servono almeno 4,5, per i titoli grandi 3.</p>
+    <div class="contrasti">
+      <div class="cont"><div class="a" style="background:var(--crema);color:var(--verde)">Aa</div><div><strong>Verde su crema <span class="ok">6,9</span></strong><span>Va bene per tutto il testo.</span></div></div>
+      <div class="cont"><div class="a" style="background:var(--verde);color:var(--carta)">Aa</div><div><strong>Carta su verde <span class="ok">7,2</span></strong><span>Va bene per tutto il testo.</span></div></div>
+      <div class="cont"><div class="a" style="background:var(--corallo);color:var(--inchiostro)">Aa</div><div><strong>Inchiostro su corallo <span class="ok">5,7</span></strong><span>Va bene: così sono i pulsanti.</span></div></div>
+      <div class="cont"><div class="a a--cr" style="background:var(--crema);color:var(--corallo)">Aa</div><div><strong>Corallo su crema <span class="no">2,5</span></strong><span>Non si usa per il testo. Solo la spunta, che è un segno.</span></div></div>
+      <div class="cont"><div class="a" style="background:var(--verde);color:var(--corallo)">Aa</div><div><strong>Corallo su verde <span class="no">2,8</span></strong><span>Solo per la spunta, mai per le parole.</span></div></div>
+      <div class="cont"><div class="a" style="background:var(--pesca);color:var(--corallo-testo)">Aa</div><div><strong>Corallo scuro #B93E25 su pesca <span class="ok">4,6</span></strong><span>Se serve testo color corallo, usa questo.</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="tipografia">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>I caratteri</h2>
+      <p class="lead">Due famiglie. Una tonda e piena per il logo e i titoli, una geometrica e pulita per le frasi. Sono entrambe gratuite e libere.</p>
+    </div>
+
+    <div class="tipo">
+      <div class="font font--d">
+        <div><div class="nome">Fredoka</div></div>
+        <p class="glifi" aria-hidden="true">Aa Bb Cc Dd Ee Ff Gg 0123456789 € ! ? àèéìòù</p>
+        <div class="meta"><span><b>Uso</b> logo, titoli, pulsanti, prezzi</span><span><b>Pesi</b> 500 · 600 · 700</span><span><b>Licenza</b> SIL Open Font</span></div>
+      </div>
+      <div class="font font--t">
+        <div><div class="nome">Outfit</div></div>
+        <p class="glifi" aria-hidden="true">Aa Bb Cc Dd Ee Ff Gg 0123456789 € ! ? àèéìòù</p>
+        <div class="meta"><span><b>Uso</b> testo corrente, sottotitoli, tagline</span><span><b>Pesi</b> 400 · 500 · 600</span><span><b>Licenza</b> SIL Open Font</span></div>
+      </div>
+    </div>
+
+    <p class="nota"><b>Come ci siamo arrivati.</b> Il logo nell'immagine di partenza è un lettering disegnato su misura, quindi nessun carattere è identico. Fredoka Bold è il più vicino: stessa "a" a un piano solo, stessi terminali arrotondati, stessa "t" con il piede curvo. La tagline ha lo stesso tipo di "a" semplice e le forme circolari di Outfit.</p>
+
+    <div class="scala">
+      <div class="riga"><small>Titolo grande<br><code>Fredoka 700 · fino a 76 px</code></small><div class="d1">Online in 3 giorni</div></div>
+      <div class="riga"><small>Titolo di sezione<br><code>Fredoka 700 · 46 px</code></small><div class="d2">Quanto costa, davvero</div></div>
+      <div class="riga"><small>Sottotitolo<br><code>Fredoka 600 · 28 px</code></small><div class="d3">Se non ti convince, ti rimborsiamo</div></div>
+      <div class="riga"><small>Testo corrente<br><code>Outfit 400 · 18–20 px · 62 caratteri per riga</code></small><div class="t1">Il sito è tuo. Il dominio è intestato a te, i testi e le foto sono tuoi. Se un giorno vuoi andare da un'altra parte, ti consegniamo tutto e lo porti dove vuoi.</div></div>
+      <div class="riga"><small>Testo secondario<br><code>Outfit 500 · 15 px</code></small><div class="t2">Prezzo massimo 500 € IVA inclusa. Rinnovo dal secondo anno: massimo 100 € l'anno.</div></div>
+      <div class="riga"><small>Etichetta<br><code>Fredoka 600 · 16 px</code></small><div><span class="t3">Rimborso entro 14 giorni</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="voce" style="background:var(--carta)">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Come parliamo</h2>
+      <p class="lead">Parliamo come si parla al bancone, non come in un preventivo. Frasi corte, numeri veri, nessuna parola che richieda un glossario.</p>
+    </div>
+    <div class="voce">
+      <div class="principi">
+        <div><h3>Diretta</h3><p>Prima il prezzo, poi i tempi, poi la garanzia. Chi legge deve trovare le tre cose senza cercarle.</p></div>
+        <div><h3>Concreta</h3><p>"Online in 3 giorni" e "massimo 500 € IVA inclusa" battono qualsiasi aggettivo. Se una cosa non possiamo promettere, non la scriviamo.</p></div>
+        <div><h3>Alla pari</h3><p>Diamo del tu. Non spieghiamo il codice a chi vuole solo il sito: spieghiamo cosa riceve e cosa deve darci.</p></div>
+      </div>
+      <div class="dire">
+        <div class="coppia"><s>Soluzioni digitali innovative per la tua presenza online</s><strong>Il tuo sito, online in 3 giorni.</strong></div>
+        <div class="coppia"><s>Offriamo una garanzia soddisfatti o rimborsati a condizioni vantaggiose</s><strong>Non ti convince? Ti restituiamo i soldi. Entro 14 giorni, senza moduli.</strong></div>
+        <div class="coppia"><s>Una piattaforma scalabile e personalizzabile</s><strong>Scritto su misura, in codice. Niente WordPress, niente temi comprati.</strong></div>
+        <div class="coppia"><s>Contattaci per un preventivo personalizzato</s><strong>Scrivici. Ti diciamo subito cosa serve e quanto costa.</strong></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="applicazioni">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Il marchio in uso</h2>
+      <p class="lead">Gli stessi elementi su una pagina vera: pulsanti, prezzo, campo di testo, icona. I testi sono quelli attuali dei due siti di partenza.</p>
+    </div>
+
+    <div class="app">
+      <div class="pannello">
+        <span class="logo logo--neg" style="--s:36px">fattofacile<svg viewBox="0 0 48 40" aria-hidden="true"><path class="tick" d="M5 21 L17 33 L43 7"/></svg></span>
+        <div>
+          <h3>Il tuo sito. Senza complicazioni.</h3>
+          <p style="margin-top:16px;max-width:42ch">Online in 3 giorni, con dominio e hosting del primo anno. Se non ti convince, ti rimborsiamo.</p>
+        </div>
+        <div class="bottoni">
+          <a class="btn btn--p" href="#applicazioni">Voglio il mio sito</a>
+          <a class="btn btn--s" href="#applicazioni">Come funziona</a>
+        </div>
+      </div>
+
+      <div class="prezzo">
+        <div>
+          <div style="font:600 16px var(--display);color:var(--grafite)">Sito vetrina, fino a 5 pagine</div>
+          <div class="num" style="margin-top:12px">500 €<span>IVA inclusa</span></div>
+        </div>
+        <ul class="spunte">
+          <li><svg viewBox="0 0 48 40" aria-hidden="true"><path class="tick" d="M5 21 L17 33 L43 7"/></svg>Dominio .it e hosting del primo anno</li>
+          <li><svg viewBox="0 0 48 40" aria-hidden="true"><path class="tick" d="M5 21 L17 33 L43 7"/></svg>Assistenza per 30 giorni</li>
+          <li><svg viewBox="0 0 48 40" aria-hidden="true"><path class="tick" d="M5 21 L17 33 L43 7"/></svg>Rimborso entro 14 giorni</li>
+        </ul>
+        <a class="btn btn--v" href="#applicazioni" style="justify-content:center">Chiedi una bozza</a>
+      </div>
+
+      <div class="mini">
+        <h3>Campo di testo</h3>
+        <div class="campo"><label for="demo-email">La tua email</label><input id="demo-email" type="email" placeholder="nome@attivita.it" autocomplete="email"></div>
+      </div>
+      <div class="mini mini--b">
+        <h3>Pulsanti</h3>
+        <div class="bottoni"><a class="btn btn--v" href="#applicazioni">Scrivici</a><button class="btn btn--v" disabled>Non disponibile</button></div>
+        <p>Il verde è l'azione su sfondo chiaro; il corallo, su sfondo verde.</p>
+      </div>
+      <div class="mini mini--c">
+        <h3>Icona</h3>
+        <div class="favicons" aria-label="Icona a quattro dimensioni">
+          <div class="icona"><b>f</b><svg viewBox="0 0 48 40" aria-hidden="true"><path class="tick" d="M5 21 L17 33 L43 7"/></svg></div>
+          <div class="icona"><b>f</b><svg viewBox="0 0 48 40" aria-hidden="true"><path class="tick" d="M5 21 L17 33 L43 7"/></svg></div>
+          <div class="icona"><b>f</b><svg viewBox="0 0 48 40" aria-hidden="true"><path class="tick" d="M5 21 L17 33 L43 7"/></svg></div>
+          <div class="icona"><b>f</b><svg viewBox="0 0 48 40" aria-hidden="true"><path class="tick" d="M5 21 L17 33 L43 7"/></svg></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="risorse" style="background:var(--carta)">
+  <div class="wrap">
+    <div class="risorse">
+      <div>
+        <h2>Per chi costruisce</h2>
+        <p class="lead">Questi sono i valori da copiare nel CSS del sito. I caratteri sono già nella cartella <code>assets/fonts</code>, pronti da servire dal tuo dominio, senza chiamate a servizi esterni.</p>
+        <ul class="lista" style="margin-top:28px">
+          <li><b>Raggi</b><span>Pulsanti e etichette a pillola (999px). Schede 24–28 px. Icona: lato × 0,23.</span></li>
+          <li><b>Spunta</b><span>Tratto 9 su 48 unità, estremi arrotondati. Si riusa come elenco puntato.</span></li>
+          <li><b>Movimento</b><span>Una sola cosa che si muove per schermata. La spunta si disegna in un secondo.</span></li>
+        </ul>
+      </div>
+      <pre class="token" aria-label="Variabili CSS del marchio"><i>:root</i>{
+  --verde:         #0E6050;
+  --verde-scuro:   #0A4A3E;
+  --menta:         #DCEBE3;
+  --corallo:       #F9775A;
+  --corallo-testo: #B93E25;
+  --pesca:         #FFE3DA;
+  --crema:         #F5F6EE;
+  --carta:         #FAFCF4;
+  --inchiostro:    #252623;
+  --grafite:       #585956;
+
+  --display: "Fredoka", sans-serif;
+  --testo:   "Outfit", sans-serif;
+}</pre>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <span class="logo">fattofacile<svg viewBox="0 0 48 40" aria-hidden="true"><path class="tick" d="M5 21 L17 33 L43 7"/></svg></span>
+    <span>Brand identity · documento interno, non per la pubblicazione</span>
+  </div>
+</footer>
+
+</body>
+</html>
