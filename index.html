@@ -154,7 +154,7 @@ p{max-width:60ch;text-wrap:pretty}
 .in .riga-p{animation:slide .6s var(--ease) forwards;animation-delay:var(--d)}
 .tot{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding-top:18px}
 .tot span:first-child{font-weight:700}
-.tot strong{font-size:clamp(44px,5vw,64px);font-weight:800;letter-spacing:-.05em;color:var(--verde);line-height:1;font-variant-numeric:tabular-nums}
+.tot strong{font-size:clamp(44px,5vw,64px);font-weight:800;letter-spacing:-.04em;color:var(--verde);line-height:1;font-variant-numeric:tabular-nums}
 .zero{color:var(--verde)}
 
 /* confronto */
@@ -164,7 +164,8 @@ p{max-width:60ch;text-wrap:pretty}
 .conf .ch{font-size:14px;font-weight:700;margin-bottom:14px}
 .conf li{display:flex;gap:10px;align-items:flex-start;padding:9px 0;font-size:15px;line-height:1.35;font-weight:500}
 .conf .vecchio li{color:var(--grafite)}
-.conf li i{flex:none;width:20px;height:20px;border-radius:50%;display:grid;place-items:center;margin-top:1px;font-style:normal;font-weight:800;font-size:12px;line-height:1}
+.conf li i{flex:none;width:22px;height:22px;border-radius:50%;display:grid;place-items:center;margin-top:0;font-style:normal}
+.conf li i svg{width:12px;height:12px}
 .conf .vecchio li i{background:#E6E3DA;color:var(--grafite)}
 .conf .nuovo li i{background:var(--verde);color:var(--carta)}
 .js .conf li{opacity:0;transform:translateY(8px)}
@@ -176,7 +177,10 @@ p{max-width:60ch;text-wrap:pretty}
 .cerca svg{width:18px;height:18px;flex:none;color:var(--grafite)}
 .cerca span:empty::before{content:"\00a0"}
 .ris{padding:14px 4px 0;display:grid;gap:12px}
-.ris .sk{height:44px;border-radius:12px;background:repeating-linear-gradient(90deg,var(--crema) 0 60%,transparent 60% 100%);background:var(--crema)}
+.ris .sk{border-radius:12px;padding:10px 14px;display:grid;gap:7px;background:var(--crema)}
+.ris .sk b{height:9px;width:46%;border-radius:99px;background:#C9CBC0}
+.ris .sk i{height:7px;border-radius:99px;background:#DADDD0}
+.ris .sk i+i{width:72%}
 .ris .tuo{border:1.5px solid var(--verde);border-radius:14px;padding:12px 14px;background:var(--carta)}
 .ris .tuo small{display:block;font-size:12px;color:var(--grafite)}
 .ris .tuo b{display:block;color:var(--verde);font-size:16px;font-weight:700;letter-spacing:-.01em}
@@ -212,7 +216,7 @@ p{max-width:60ch;text-wrap:pretty}
 .rin li svg{width:20px;height:12px;--tick:var(--corallo-testo);flex:none}
 .rin li small{color:var(--grafite);font-weight:400}
 .rin-p{display:flex;align-items:baseline;justify-content:space-between;gap:12px;padding-top:16px}
-.rin-p strong{font-size:clamp(40px,4.4vw,56px);font-weight:800;letter-spacing:-.05em;color:var(--verde);line-height:1}
+.rin-p strong{font-size:clamp(40px,4.4vw,56px);font-weight:800;letter-spacing:-.04em;color:var(--verde);line-height:1}
 .rin-p strong small{font-size:18px;letter-spacing:-.01em;color:var(--grafite);font-weight:600;margin-left:6px}
 .sw{display:flex;align-items:center;gap:14px;margin-top:18px;padding:14px 16px;border-radius:16px;background:var(--crema);width:100%;border:0;font:600 15px var(--font);color:var(--inchiostro);cursor:pointer;text-align:left;min-height:56px}
 .sw .tr{flex:none;width:46px;height:28px;border-radius:99px;background:var(--verde);position:relative;transition:background .35s}
@@ -256,7 +260,7 @@ p{max-width:60ch;text-wrap:pretty}
 .dark h2{color:var(--carta)}
 .dark .sub{color:var(--menta)}
 .prezzo{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(32px,6vw,88px);align-items:center}
-.pr-big{font-size:clamp(88px,15vw,200px);font-weight:800;letter-spacing:-.07em;line-height:.9;color:var(--carta);font-variant-numeric:tabular-nums}
+.pr-big{font-size:clamp(80px,13vw,176px);font-weight:800;letter-spacing:-.04em;line-height:.9;color:var(--carta);font-variant-numeric:tabular-nums}
 .pr-big small{font-size:.22em;letter-spacing:-.02em;color:var(--menta);font-weight:700;margin-left:.2em}
 .pr-note{margin-top:18px;font-size:clamp(18px,1.8vw,22px);font-weight:600;color:var(--menta);max-width:34ch}
 .incl{display:grid;gap:0}
@@ -381,7 +385,7 @@ footer .logo svg{height:22px}
         </div>
       </div>
       <div class="stamp"><svg viewBox="0 0 90 56" aria-hidden="true"><use href="#tickmark"/></svg>Online</div>
-      <span class="chip">500 € una volta sola</span>
+      <span class="chip">Zero costi nascosti</span>
       <span class="chip chip--b">Tuo a vita</span>
     </div>
   </div>
@@ -401,7 +405,7 @@ footer .logo svg{height:22px}
           <div class="pad">
             <div class="riga-p" style="--d:.1s"><span>Sito su misura</span><span>500 €</span></div>
             <div class="riga-p" style="--d:.3s"><span>Dominio .it e hosting, primo anno</span><span class="zero">incluso</span></div>
-            <div class="riga-p" style="--d:.5s"><span>Assistenza per 30 giorni</span><span class="zero">inclusa</span></div>
+            <div class="riga-p" style="--d:.5s"><span>Portale per gestirlo da solo</span><span class="zero">incluso</span></div>
             <div class="riga-p" style="--d:.7s"><span>Costi nascosti</span><span class="zero">0 €</span></div>
             <div class="tot"><span>Totale, una volta sola</span><strong id="tot">500 €</strong></div>
           </div>
@@ -417,17 +421,17 @@ footer .logo svg{height:22px}
           <div class="conf">
             <div class="vecchio"><div class="ch">Con un builder</div>
               <ul>
-                <li style="--d:.1s"><i>×</i>Tema uguale a mille altri</li>
-                <li style="--d:.3s"><i>×</i>Plugin da tenere aggiornati</li>
-                <li style="--d:.5s"><i>×</i>Pagine pesanti e lente</li>
-                <li style="--d:.7s"><i>×</i>Ti serve qualcuno che lo gestisca</li>
+                <li style="--d:.1s"><i><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M3 3l6 6M9 3l-6 6"/></svg></i>Tema uguale a mille altri</li>
+                <li style="--d:.3s"><i><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M3 3l6 6M9 3l-6 6"/></svg></i>Plugin da tenere aggiornati</li>
+                <li style="--d:.5s"><i><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M3 3l6 6M9 3l-6 6"/></svg></i>Pagine pesanti e lente</li>
+                <li style="--d:.7s"><i><svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M3 3l6 6M9 3l-6 6"/></svg></i>Ti serve qualcuno che lo gestisca</li>
               </ul></div>
             <div class="nuovo"><div class="ch">Con fattofacile</div>
               <ul>
-                <li style="--d:.2s"><i>✓</i>Disegnato sulla tua attività</li>
-                <li style="--d:.4s"><i>✓</i>Niente plugin, niente rotture</li>
-                <li style="--d:.6s"><i>✓</i>Leggero, si apre subito</li>
-                <li style="--d:.8s"><i>✓</i>Lo gestisci tu dal portale</li>
+                <li style="--d:.2s"><i><svg viewBox="0 0 90 56" aria-hidden="true" style="--tick:var(--carta);width:12px;height:8px"><use href="#tickmark"/></svg></i>Disegnato sulla tua attività</li>
+                <li style="--d:.4s"><i><svg viewBox="0 0 90 56" aria-hidden="true" style="--tick:var(--carta);width:12px;height:8px"><use href="#tickmark"/></svg></i>Niente plugin, niente rotture</li>
+                <li style="--d:.6s"><i><svg viewBox="0 0 90 56" aria-hidden="true" style="--tick:var(--carta);width:12px;height:8px"><use href="#tickmark"/></svg></i>Leggero, si apre subito</li>
+                <li style="--d:.8s"><i><svg viewBox="0 0 90 56" aria-hidden="true" style="--tick:var(--carta);width:12px;height:8px"><use href="#tickmark"/></svg></i>Lo gestisci tu dal portale</li>
               </ul></div>
           </div>
         </div>
@@ -442,9 +446,9 @@ footer .logo svg{height:22px}
         <div class="win" id="v-cerca"><div class="win-bar"><span class="dots"><i></i><i></i><i></i></span><span class="tag">Esempio</span></div>
           <div class="pad">
             <div class="cerca"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="8.5" cy="8.5" r="5.5"/><path d="M13 13l4 4"/></svg><span id="q"></span></div>
-            <div class="ris"><div class="sk"></div>
+            <div class="ris"><div class="sk"><b></b><i></i><i></i></div>
               <div class="tuo" id="tuo"><small>studiorossi.it</small><b>Studio Rossi · Fisioterapia a Bologna</b><p>Prenota una visita. Orari, indirizzo e contatti.</p></div>
-              <div class="sk"></div></div>
+              <div class="sk"><b></b><i></i><i></i></div></div>
             <div class="chat">
               <div class="u" id="cu">Un buon fisioterapista a Bologna?</div>
               <div class="a" id="ca">Ti consiglio <b>Studio Rossi</b>: ha il sito aggiornato, con orari e indirizzo.</div>
@@ -457,7 +461,7 @@ footer .logo svg{height:22px}
       <article class="leva rv">
         <div class="leva-t">
           <h2>Cambi tu le cose, <span class="hl">senza intermediari</span></h2>
-          <p>Con il portale aggiorni orari, prezzi e foto da solo. Niente telefonate, niente mail, niente attese. Ti facciamo vedere come si usa nella formazione di 30 minuti.</p>
+          <p>Con il portale aggiorni orari, prezzi e foto da solo. Niente telefonate, niente mail, niente attese. Ti facciamo vedere come si usa.</p>
         </div>
         <div class="win" id="v-portale"><div class="win-bar"><span class="dots"><i></i><i></i><i></i></span><span class="tag">Il tuo portale</span></div>
           <div class="portale">
@@ -503,8 +507,8 @@ footer .logo svg{height:22px}
     <h2 class="rv">Dalla prima chiamata a <span class="hl">sito online</span></h2>
     <div class="giorni rv" id="gg">
       <div class="giorno"><span class="g">Giorno 1</span><h3>Ci sentiamo</h3><p>Ci racconti la tua attività e ci mandi logo e foto. I testi li scriviamo noi.</p></div>
-      <div class="giorno"><span class="g">Giorno 2</span><h3>Vedi la bozza</h3><p>Ricevi il sito pronto da guardare. Dici cosa cambiare prima di pagare.</p></div>
-      <div class="giorno"><span class="g">Giorno 3</span><h3>Va online</h3><p>Pubblichiamo e ti insegniamo il portale. Da qui in avanti il sito è tuo.</p></div>
+      <div class="giorno"><span class="g">Giorno 2</span><h3>Vedi la bozza</h3><p>Ricevi il sito pronto da guardare e ci dici cosa vuoi cambiare.</p></div>
+      <div class="giorno"><span class="g">Giorno 3</span><h3>Va online</h3><p>Pubblichiamo e ti facciamo vedere come usare il portale. Da qui in avanti il sito è tuo.</p></div>
     </div>
   </div>
 </section>
@@ -532,12 +536,9 @@ footer .logo svg{height:22px}
       <p class="pr-note">Una volta sola. Il sito è tuo a vita.</p>
     </div>
     <div class="rv">
-      <h2>Cosa ottieni, <span class="hl">cosa non paghi</span></h2>
+      <h2>Le condizioni, <span class="hl">scritte chiare</span></h2>
       <ul class="incl" style="margin-top:28px">
-        <li><svg viewBox="0 0 90 56" aria-hidden="true"><use href="#tickmark"/></svg><span>Sito personalizzato e veloce<small>Scritto in codice, su misura per te.</small></span></li>
-        <li><svg viewBox="0 0 90 56" aria-hidden="true"><use href="#tickmark"/></svg><span>Indicizzato su Google e ChatGPT<small>Online già pronto per essere trovato.</small></span></li>
-        <li><svg viewBox="0 0 90 56" aria-hidden="true"><use href="#tickmark"/></svg><span>Portale per gestirlo da solo<small>Senza intermediari.</small></span></li>
-        <li><svg viewBox="0 0 90 56" aria-hidden="true"><use href="#tickmark"/></svg><span>Soddisfatti o rimborsati<small>Entro 14 giorni dalla consegna.</small></span></li>
+                <li><svg viewBox="0 0 90 56" aria-hidden="true"><use href="#tickmark"/></svg><span>Soddisfatti o rimborsati<small>Entro 14 giorni dalla consegna.</small></span></li>
         <li><svg viewBox="0 0 90 56" aria-hidden="true"><use href="#tickmark"/></svg><span>Poi 100 € l'anno, solo se vuoi<small>Dominio, hosting e modifiche non strutturali. Disdici quando vuoi.</small></span></li>
       </ul>
       <div class="cta-row"><a class="btn btn--c" href="#contatto">Voglio il mio sito <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10h12M11 5l5 5-5 5"/></svg></a></div>
@@ -550,12 +551,12 @@ footer .logo svg{height:22px}
     <h2 class="rv">Le domande che ci fanno <span class="hl">sempre</span></h2>
     <div class="faq rv">
       <details><summary>Ci sono costi nascosti?<i></i></summary><p>No. Paghi 500 € una volta sola. Dal secondo anno, se vuoi che ci occupiamo noi di dominio, hosting e modifiche non strutturali, sono 100 € l'anno. Nessun'altra voce.</p></details>
-      <details><summary>Il sito è davvero mio?<i></i></summary><p>Sì, a vita. Il dominio è intestato a te e i testi e le foto sono tuoi. Se un giorno vuoi andare da un'altra parte, ti consegniamo tutto e lo porti dove vuoi.</p></details>
-      <details><summary>Posso disdire la manutenzione?<i></i></summary><p>Quando vuoi, senza penali e senza vincoli. Il sito resta tuo: ti consegniamo i file per ospitarlo altrove.</p></details>
+      <details><summary>Il sito è davvero mio?<i></i></summary><p>Sì, a vita. Il dominio è intestato a te e i testi e le foto sono tuoi. Se un giorno vuoi andare da un'altra parte, il sito è tuo.</p></details>
+      <details><summary>Posso disdire la manutenzione?<i></i></summary><p>Quando vuoi, senza penali e senza vincoli. Il sito resta tuo.</p></details>
       <details><summary>Cosa vuol dire indicizzato su Google e ChatGPT?<i></i></summary><p>Pubblichiamo il sito con i dati che servono a Google e agli assistenti AI per capire chi sei, cosa fai e dove. Nessuno può promettere una posizione precisa, ma il sito parte con tutto a posto per farsi trovare.</p></details>
-      <details><summary>E se non mi piace?<i></i></summary><p>Hai 14 giorni dalla consegna per dirci che non ti convince e ti rimborsiamo. Non devi spiegare né compilare moduli.</p></details>
+      <details><summary>E se non mi piace?<i></i></summary><p>Hai 14 giorni dalla consegna per dirci che non ti convince e ti rimborsiamo.</p></details>
       <details><summary>Davvero in 3 giorni?<i></i></summary><p>Sì, dal momento in cui abbiamo logo, foto e le informazioni di base. Se il tuo progetto è più grande di un sito vetrina, te lo diciamo prima.</p></details>
-      <details><summary>Cambiare un orario o un prezzo è difficile?<i></i></summary><p>No. Lo fai tu dal portale, senza chiamare nessuno. Nella formazione di 30 minuti ti facciamo vedere come.</p></details>
+      <details><summary>Cambiare un orario o un prezzo è difficile?<i></i></summary><p>No. Lo fai tu dal portale, senza chiamare nessuno. Ti facciamo vedere come si usa.</p></details>
     </div>
   </div>
 </section>
@@ -564,9 +565,9 @@ footer .logo svg{height:22px}
   <div class="wrap">
     <div class="rv">
       <h2>Raccontaci <span class="hl">la tua attività</span></h2>
-      <p class="sub">Tre righe e ti richiamiamo noi. Nessun impegno: prima vedi la bozza, poi decidi.</p>
+      <p class="sub">Tre righe e ti richiamiamo noi per capire cosa ti serve. Nessun impegno a rispondere.</p>
       <ul class="garanzie">
-        <li><svg viewBox="0 0 90 56" aria-hidden="true"><use href="#tickmark"/></svg>500 € una volta sola, sito tuo a vita</li>
+        <li><svg viewBox="0 0 90 56" aria-hidden="true"><use href="#tickmark"/></svg>Il sito è tuo, a vita</li>
         <li><svg viewBox="0 0 90 56" aria-hidden="true"><use href="#tickmark"/></svg>Rimborso entro 14 giorni dalla consegna</li>
         <li><svg viewBox="0 0 90 56" aria-hidden="true"><use href="#tickmark"/></svg>Manutenzione disdicibile quando vuoi</li>
       </ul>
@@ -652,7 +653,7 @@ footer .logo svg{height:22px}
   var sw=$('#sw'),rin=$('#rin');
   sw.addEventListener('click',function(){var on=sw.getAttribute('aria-pressed')!=='true';sw.setAttribute('aria-pressed',on);rin.classList.toggle('off',!on);
     $('#swt').textContent=on?'Rinnovo attivo':'Rinnovo disdetto';
-    $('#sws').textContent=on?'Disdici quando vuoi, nessuna penale.':'Nessuna penale. Il sito resta tuo e ti consegniamo tutto.'});
+    $('#sws').textContent=on?'Disdici quando vuoi, nessuna penale.':'Nessuna penale. Il sito resta tuo.'});
 
   /* modulo */
   var ENDPOINT='';/* da collegare: URL che riceve nome, attivita, telefono (POST JSON) */
