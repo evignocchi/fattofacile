@@ -9,6 +9,18 @@
         "value": "inter",
         "createdAt": "2026-10-09T12:51:54.918Z",
         "reason": "user confirmed: asked explicitly for the Inter version of the brand page"
+      },
+      {
+        "rule": "design-system-font",
+        "value": "sf mono",
+        "createdAt": "2026-10-09T13:20:49.554Z",
+        "reason": "Claude: monospace stack used only for code and hex values on brand.html (data, not display type)"
+      },
+      {
+        "rule": "design-system-font",
+        "value": "georgia",
+        "createdAt": "2026-10-09T13:20:49.565Z",
+        "reason": "Claude: Georgia appears only in the deliberate 'wrong typeface' misuse example on brand.html"
       }
     ]
   }
