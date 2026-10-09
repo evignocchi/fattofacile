@@ -7,36 +7,35 @@
 <meta name="description" content="Logo, colori, tipografia e voce di fattofacile.it: le regole per usare il marchio in modo coerente.">
 <meta name="robots" content="noindex">
 <style>
-@font-face{font-family:"Fredoka";font-weight:500;font-display:swap;src:url(assets/fonts/fredoka-latin-500-normal.woff2) format("woff2")}
-@font-face{font-family:"Fredoka";font-weight:600;font-display:swap;src:url(assets/fonts/fredoka-latin-600-normal.woff2) format("woff2")}
-@font-face{font-family:"Fredoka";font-weight:700;font-display:swap;src:url(assets/fonts/fredoka-latin-700-normal.woff2) format("woff2")}
-@font-face{font-family:"Outfit";font-weight:400;font-display:swap;src:url(assets/fonts/outfit-latin-400-normal.woff2) format("woff2")}
-@font-face{font-family:"Outfit";font-weight:500;font-display:swap;src:url(assets/fonts/outfit-latin-500-normal.woff2) format("woff2")}
-@font-face{font-family:"Outfit";font-weight:600;font-display:swap;src:url(assets/fonts/outfit-latin-600-normal.woff2) format("woff2")}
+@font-face{font-family:"Inter";font-weight:400;font-display:swap;src:url(assets/fonts/inter-latin-400-normal.woff2) format("woff2")}
+@font-face{font-family:"Inter";font-weight:500;font-display:swap;src:url(assets/fonts/inter-latin-500-normal.woff2) format("woff2")}
+@font-face{font-family:"Inter";font-weight:600;font-display:swap;src:url(assets/fonts/inter-latin-600-normal.woff2) format("woff2")}
+@font-face{font-family:"Inter";font-weight:700;font-display:swap;src:url(assets/fonts/inter-latin-700-normal.woff2) format("woff2")}
+@font-face{font-family:"Inter";font-weight:800;font-display:swap;src:url(assets/fonts/inter-latin-800-normal.woff2) format("woff2")}
 
 :root{
   --verde:#0F5F51; --verde-scuro:#0A4A3E; --menta:#DCEBE3;
   --corallo:#EE745D; --corallo-testo:#B93E25; --pesca:#FFE3DA;
   --crema:#F5F6EE; --carta:#FAFCF4; --inchiostro:#252623; --grafite:#585956;
   --linea:#DADDD0;
-  --display:"Fredoka","Nunito","Trebuchet MS",sans-serif;
-  --testo:"Outfit","Segoe UI",system-ui,sans-serif;
+  --display:"Inter","Segoe UI",system-ui,sans-serif;
+  --testo:"Inter","Segoe UI",system-ui,sans-serif;
   --ease:cubic-bezier(.16,1,.3,1);
   --gutter:clamp(16px,4vw,48px);
   --max:1120px;
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth;scroll-padding-top:80px}
-body{background:var(--crema);color:var(--inchiostro);font:400 18px/1.6 var(--testo);-webkit-font-smoothing:antialiased}
+body{background:var(--crema);color:var(--inchiostro);font:400 17px/1.6 var(--testo);font-feature-settings:"cv11","ss03";-webkit-font-smoothing:antialiased}
 ::selection{background:var(--verde);color:var(--carta)}
 :focus-visible{outline:3px solid var(--verde);outline-offset:3px;border-radius:6px}
 img,svg{display:block;max-width:100%}
 a{color:inherit}
 .wrap{max-width:var(--max);margin:0 auto;padding:0 var(--gutter)}
 section{padding:clamp(64px,9vw,128px) 0}
-h1,h2,h3{font-family:var(--display);font-weight:700;color:var(--verde);text-wrap:balance;letter-spacing:-.02em;line-height:1.05}
+h1,h2,h3{font-family:var(--display);font-weight:800;color:var(--verde);text-wrap:balance;letter-spacing:-.03em;line-height:1.08}
 h2{font-size:clamp(34px,5vw,60px)}
-h3{font-size:clamp(22px,2.4vw,28px);line-height:1.15;letter-spacing:-.01em}
+h3{font-size:clamp(20px,2.2vw,26px);line-height:1.2;letter-spacing:-.02em;font-weight:700}
 p{max-width:64ch;text-wrap:pretty}
 .lead{font-size:clamp(19px,2vw,22px);color:var(--grafite);margin-top:20px}
 .sec-head{margin-bottom:clamp(36px,5vw,64px)}
@@ -49,7 +48,7 @@ code,.mono{font-family:ui-monospace,"SF Mono",Menlo,monospace;font-size:.85em;fo
 .logo--neg{color:var(--carta)}
 .logo--bianco{color:var(--carta);--tick:var(--carta)}
 .icona{--s:120px;width:var(--s);height:var(--s);border-radius:calc(var(--s)*.23);background:var(--verde);position:relative;flex:none;display:grid;place-items:center}
-.icona b{font:700 calc(var(--s)*.74)/1 var(--display);color:var(--carta);transform:translate(-14%,3%)}
+.icona b{font:800 calc(var(--s)*.74)/1 var(--display);color:var(--carta);transform:translate(-14%,3%)}
 .icona{--tick:var(--corallo)}
 .icona svg{position:absolute;width:32%;height:20%;right:12%;top:24%;overflow:visible}
 
@@ -68,7 +67,7 @@ code,.mono{font-family:ui-monospace,"SF Mono",Menlo,monospace;font-size:.85em;fo
 /* --- hero --- */
 .hero{padding:clamp(56px,10vw,140px) 0 clamp(8px,2vw,24px);text-align:center}
 .hero .logo{--s:clamp(48px,11.5vw,148px)}
-.hero .tag{margin:clamp(20px,3vw,36px) auto 0;font:500 clamp(18px,2.6vw,28px)/1.3 var(--testo);color:var(--verde);max-width:none}
+.hero .tag{margin:clamp(20px,3vw,36px) auto 0;font:500 clamp(18px,2.6vw,28px)/1.3 var(--testo);letter-spacing:-.02em;color:var(--verde);max-width:none}
 .hero .intro{margin:28px auto 0;color:var(--grafite);font-size:clamp(17px,1.8vw,20px)}
 .hero .logo{animation:entra .9s var(--ease) both}
 @keyframes entra{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
@@ -116,7 +115,7 @@ code,.mono{font-family:ui-monospace,"SF Mono",Menlo,monospace;font-size:.85em;fo
 /* --- colori --- */
 .palette{display:grid;grid-template-columns:repeat(12,1fr);gap:0;border-radius:28px;overflow:hidden;border:1px solid var(--linea)}
 .col{padding:28px 24px 24px;min-height:300px;display:flex;flex-direction:column;justify-content:space-between;gap:24px}
-.col h3{font-size:clamp(24px,2.6vw,32px);color:inherit}
+.col h3{font-size:clamp(22px,2.4vw,28px);color:inherit}
 .col p{font-size:15px;line-height:1.5;margin-top:8px}
 .col dl{display:grid;grid-template-columns:auto 1fr;gap:2px 14px;font-size:14px}
 .col dt{font-weight:400} .col dd{font-variant-numeric:tabular-nums;font-weight:500}
@@ -149,11 +148,11 @@ code,.mono{font-family:ui-monospace,"SF Mono",Menlo,monospace;font-size:.85em;fo
 .font{border-radius:28px;padding:clamp(28px,4vw,48px);display:flex;flex-direction:column;gap:28px;justify-content:space-between}
 .font--d{background:var(--verde);color:var(--carta)}
 .font--t{background:var(--carta);border:1px solid var(--linea)}
-.font .nome{font-size:clamp(64px,10vw,128px);line-height:.9;letter-spacing:-.03em}
-.font--d .nome{font-family:var(--display);font-weight:700}
-.font--t .nome{font-family:var(--testo);font-weight:500;color:var(--verde)}
+.font .nome{font-size:clamp(64px,10vw,128px);line-height:.95}
+.font--d .nome{font-weight:800;letter-spacing:-.045em}
+.font--t .nome{font-weight:400;color:var(--verde);letter-spacing:-.045em}
 .font .glifi{font-size:clamp(20px,2.4vw,28px);line-height:1.4;word-break:break-all}
-.font--d .glifi{font-family:var(--display);font-weight:600}
+.font--d .glifi{font-weight:700}
 .font--t .glifi{font-weight:500}
 .font .meta{display:flex;gap:10px 28px;flex-wrap:wrap;font-size:14px}
 .font .meta b{font-weight:600}
@@ -161,12 +160,12 @@ code,.mono{font-family:ui-monospace,"SF Mono",Menlo,monospace;font-size:.85em;fo
 .riga{display:grid;grid-template-columns:150px 1fr;gap:12px 32px;align-items:baseline;padding:22px 0;border-bottom:1px solid var(--linea)}
 .riga:first-child{border-top:1px solid var(--linea)}
 .riga small{font-size:14px;color:var(--grafite);line-height:1.4}
-.riga .d1{font:700 clamp(38px,6vw,76px)/1 var(--display);color:var(--verde);letter-spacing:-.025em}
-.riga .d2{font:700 clamp(28px,4vw,46px)/1.05 var(--display);color:var(--verde);letter-spacing:-.02em}
-.riga .d3{font:600 clamp(22px,2.6vw,28px)/1.2 var(--display);color:var(--verde)}
-.riga .t1{font:400 clamp(18px,1.9vw,20px)/1.6 var(--testo);max-width:62ch}
+.riga .d1{font:800 clamp(38px,6vw,76px)/1.02 var(--display);color:var(--verde);letter-spacing:-.04em}
+.riga .d2{font:800 clamp(28px,4vw,46px)/1.08 var(--display);color:var(--verde);letter-spacing:-.035em}
+.riga .d3{font:700 clamp(22px,2.6vw,28px)/1.2 var(--display);color:var(--verde);letter-spacing:-.02em}
+.riga .t1{font:400 clamp(17px,1.8vw,19px)/1.65 var(--testo);max-width:62ch}
 .riga .t2{font:500 15px/1.5 var(--testo);color:var(--grafite)}
-.riga .t3{font:600 16px/1 var(--display);color:var(--verde);background:var(--menta);display:inline-block;padding:12px 22px;border-radius:999px}
+.riga .t3{font:600 15px/1 var(--display);color:var(--verde);background:var(--menta);display:inline-block;padding:12px 22px;border-radius:999px}
 @media(max-width:640px){.riga{grid-template-columns:1fr}}
 .nota{margin-top:36px;padding:22px 24px;background:var(--pesca);border-radius:20px;font-size:16px;max-width:none;color:var(--inchiostro)}
 
@@ -180,17 +179,17 @@ code,.mono{font-family:ui-monospace,"SF Mono",Menlo,monospace;font-size:.85em;fo
 .dire .coppia{padding:22px 0;border-bottom:1px solid var(--linea);display:grid;gap:8px}
 .dire .coppia:first-child{border-top:1px solid var(--linea)}
 .dire s{color:var(--grafite);text-decoration-color:var(--corallo);text-decoration-thickness:2px}
-.dire strong{font:600 clamp(20px,2vw,24px)/1.3 var(--display);color:var(--verde)}
+.dire strong{font:700 clamp(19px,2vw,23px)/1.3 var(--display);letter-spacing:-.02em;color:var(--verde)}
 
 /* --- applicazioni --- */
 .app{display:grid;grid-template-columns:repeat(12,1fr);gap:16px}
 .app>*{border-radius:28px}
 .pannello{grid-column:span 7;background:var(--verde);color:var(--carta);padding:clamp(28px,4vw,52px);display:flex;flex-direction:column;gap:20px;justify-content:space-between;min-height:420px}
 .pannello .logo{align-self:flex-start}
-.pannello h3{color:var(--carta);font-size:clamp(34px,5vw,56px);max-width:12ch}
+.pannello h3{color:var(--carta);font-size:clamp(34px,5vw,52px);max-width:13ch;font-weight:800;letter-spacing:-.04em}
 .pannello p{color:var(--menta)}
 .bottoni{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
-.btn{font:600 17px/1 var(--display);display:inline-flex;align-items:center;gap:10px;min-height:52px;padding:0 28px;border-radius:999px;border:2px solid transparent;text-decoration:none;cursor:pointer;transition:transform .35s var(--ease),background .25s var(--ease),color .25s var(--ease)}
+.btn{font:600 16px/1 var(--display);letter-spacing:-.01em;display:inline-flex;align-items:center;gap:10px;min-height:52px;padding:0 28px;border-radius:999px;border:2px solid transparent;text-decoration:none;cursor:pointer;transition:transform .35s var(--ease),background .25s var(--ease),color .25s var(--ease)}
 .btn:hover{transform:translateY(-2px)}
 .btn:active{transform:translateY(0)}
 .btn--p{background:var(--corallo);color:var(--inchiostro)}
@@ -201,7 +200,7 @@ code,.mono{font-family:ui-monospace,"SF Mono",Menlo,monospace;font-size:.85em;fo
 .btn--v:hover{background:var(--verde-scuro)}
 .btn[disabled]{opacity:.45;cursor:not-allowed;transform:none}
 .prezzo{grid-column:span 5;background:var(--carta);border:1px solid var(--linea);padding:clamp(28px,4vw,44px);display:flex;flex-direction:column;gap:18px;justify-content:space-between}
-.prezzo .num{font:700 clamp(64px,9vw,104px)/.9 var(--display);color:var(--verde);letter-spacing:-.04em;font-variant-numeric:tabular-nums}
+.prezzo .num{font:800 clamp(64px,9vw,104px)/.9 var(--display);color:var(--verde);letter-spacing:-.05em;font-variant-numeric:tabular-nums}
 .prezzo .num span{display:block;font-size:18px;letter-spacing:0;color:var(--grafite);margin-top:10px;font-weight:600}
 .spunte{list-style:none;display:grid;gap:10px}
 .spunte li{display:flex;gap:12px;align-items:flex-start;font-size:17px}
@@ -384,31 +383,31 @@ footer .logo{--s:28px}
   <div class="wrap">
     <div class="sec-head">
       <h2>I caratteri</h2>
-      <p class="lead">Due famiglie. Una tonda e piena per il logo e i titoli, una geometrica e pulita per le frasi. Sono entrambe gratuite e libere.</p>
+      <p class="lead">Una sola famiglia, Inter, usata in due modi: pesante e stretta per i titoli, normale per le frasi. Il carattere più personale è già il logo, quindi il resto resta neutro e leggibile. È gratuito e libero.</p>
     </div>
 
     <div class="tipo">
       <div class="font font--d">
-        <div><div class="nome">Fredoka</div></div>
+        <div><div class="nome">Inter</div></div>
         <p class="glifi" aria-hidden="true">Aa Bb Cc Dd Ee Ff Gg 0123456789 € ! ? àèéìòù</p>
-        <div class="meta"><span><b>Uso</b> logo, titoli, pulsanti, prezzi</span><span><b>Pesi</b> 500 · 600 · 700</span><span><b>Licenza</b> SIL Open Font</span></div>
+        <div class="meta"><span><b>Uso</b> titoli, pulsanti, prezzi</span><span><b>Pesi</b> 700 · 800</span><span><b>Licenza</b> SIL Open Font</span></div>
       </div>
       <div class="font font--t">
-        <div><div class="nome">Outfit</div></div>
+        <div><div class="nome">Inter</div></div>
         <p class="glifi" aria-hidden="true">Aa Bb Cc Dd Ee Ff Gg 0123456789 € ! ? àèéìòù</p>
         <div class="meta"><span><b>Uso</b> testo corrente, sottotitoli, tagline</span><span><b>Pesi</b> 400 · 500 · 600</span><span><b>Licenza</b> SIL Open Font</span></div>
       </div>
     </div>
 
-    <p class="nota"><b>Da dove vengono.</b> Il logo è il file SVG fornito da voi: le lettere sono disegnate su misura e non dipendono da nessun carattere installato. Fredoka e Outfit servono per tutto il resto. Fredoka è il carattere libero più vicino al lettering del logo (stessa "a" a un piano solo, terminali arrotondati, "t" con il piede curvo), Outfit ha la "a" semplice e le forme circolari della tagline.</p>
+    <p class="nota"><b>Perché Inter.</b> Il logo è un lettering tondo disegnato su misura. Inter non lo imita: gli sta accanto senza competere, si legge bene anche in piccolo e funziona su ogni schermo. I titoli vanno in peso 800 con spaziatura stretta, così restano compatti e decisi.</p>
 
     <div class="scala">
-      <div class="riga"><small>Titolo grande<br><code>Fredoka 700 · fino a 76 px</code></small><div class="d1">Online in 3 giorni</div></div>
-      <div class="riga"><small>Titolo di sezione<br><code>Fredoka 700 · 46 px</code></small><div class="d2">Quanto costa, davvero</div></div>
-      <div class="riga"><small>Sottotitolo<br><code>Fredoka 600 · 28 px</code></small><div class="d3">Se non ti convince, ti rimborsiamo</div></div>
-      <div class="riga"><small>Testo corrente<br><code>Outfit 400 · 18–20 px · 62 caratteri per riga</code></small><div class="t1">Il sito è tuo. Il dominio è intestato a te, i testi e le foto sono tuoi. Se un giorno vuoi andare da un'altra parte, ti consegniamo tutto e lo porti dove vuoi.</div></div>
-      <div class="riga"><small>Testo secondario<br><code>Outfit 500 · 15 px</code></small><div class="t2">Prezzo massimo 500 € IVA inclusa. Rinnovo dal secondo anno: massimo 100 € l'anno.</div></div>
-      <div class="riga"><small>Etichetta<br><code>Fredoka 600 · 16 px</code></small><div><span class="t3">Rimborso entro 14 giorni</span></div></div>
+      <div class="riga"><small>Titolo grande<br><code>Inter 800 · fino a 76 px</code></small><div class="d1">Online in 3 giorni</div></div>
+      <div class="riga"><small>Titolo di sezione<br><code>Inter 800 · 46 px</code></small><div class="d2">Quanto costa, davvero</div></div>
+      <div class="riga"><small>Sottotitolo<br><code>Inter 700 · 28 px</code></small><div class="d3">Se non ti convince, ti rimborsiamo</div></div>
+      <div class="riga"><small>Testo corrente<br><code>Inter 400 · 17–19 px · 62 caratteri per riga</code></small><div class="t1">Il sito è tuo. Il dominio è intestato a te, i testi e le foto sono tuoi. Se un giorno vuoi andare da un'altra parte, ti consegniamo tutto e lo porti dove vuoi.</div></div>
+      <div class="riga"><small>Testo secondario<br><code>Inter 500 · 15 px</code></small><div class="t2">Prezzo massimo 500 € IVA inclusa. Rinnovo dal secondo anno: massimo 100 € l'anno.</div></div>
+      <div class="riga"><small>Etichetta<br><code>Inter 600 · 16 px</code></small><div><span class="t3">Rimborso entro 14 giorni</span></div></div>
     </div>
   </div>
 </section>
@@ -515,8 +514,8 @@ footer .logo{--s:28px}
   --inchiostro:    #252623;
   --grafite:       #585956;
 
-  --display: "Fredoka", sans-serif;
-  --testo:   "Outfit", sans-serif;
+  --display: "Inter", sans-serif;
+  --testo:   "Inter", sans-serif;
 }</pre>
     </div>
   </div>
